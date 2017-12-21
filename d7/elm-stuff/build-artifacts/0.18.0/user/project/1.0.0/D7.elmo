@@ -10,8 +10,8 @@ var _user$project$D7$formatName = function (str) {
 		return _elm_lang$core$Native_Utils.crashCase(
 			'D7',
 			{
-				start: {line: 86, column: 5},
-				end: {line: 94, column: 26}
+				start: {line: 91, column: 5},
+				end: {line: 99, column: 26}
 			},
 			_p0)('Error, why empty?????!?!?!');
 	} else {
@@ -19,8 +19,8 @@ var _user$project$D7$formatName = function (str) {
 			return _elm_lang$core$Native_Utils.crashCase(
 				'D7',
 				{
-					start: {line: 86, column: 5},
-					end: {line: 94, column: 26}
+					start: {line: 91, column: 5},
+					end: {line: 99, column: 26}
 				},
 				_p0)('This shouldn\'t happn');
 		} else {
@@ -35,8 +35,8 @@ var _user$project$D7$splitChildren = function (list) {
 			return _elm_lang$core$Native_Utils.crashCase(
 				'D7',
 				{
-					start: {line: 55, column: 13},
-					end: {line: 65, column: 52}
+					start: {line: 59, column: 13},
+					end: {line: 70, column: 52}
 				},
 				_p3)('Error, unable to parse empty List');
 		} else {
@@ -53,8 +53,8 @@ var _user$project$D7$splitChildren = function (list) {
 					return _elm_lang$core$Native_Utils.crashCase(
 						'D7',
 						{
-							start: {line: 55, column: 13},
-							end: {line: 65, column: 52}
+							start: {line: 59, column: 13},
+							end: {line: 70, column: 52}
 						},
 						_p3)('I shouldn\'t exist');
 				}

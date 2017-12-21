@@ -14,13 +14,15 @@ type alias Node =
 
 
 main =
-    text (Input.str
-        |> String.lines
-        |> List.filter (\x -> not (String.isEmpty x))
-        |> splitChildren
-        |> formatNodeStrs
-        |> (\list -> List.map (matchParent list) list)
-        |> parentLess )
+    text
+        (Input.str
+            |> String.lines
+            |> List.filter (\x -> not (String.isEmpty x))
+            |> splitChildren
+            |> formatNodeStrs
+            |> (\list -> List.map (matchParent list) list)
+            |> parentLess
+        )
 
 
 parentLess : List Node -> String
@@ -28,10 +30,13 @@ parentLess list =
     case List.filter (\x -> x.parent == Nothing) list of
         [] ->
             "No parentless Node found"
-        [x] ->
+
+        [ x ] ->
             "The parentless Node was " ++ x.name
+
         l ->
             "Multiple parentless Nodes found: " ++ String.concat (List.map (\x -> x.name) l)
+
 
 matchParent : List Node -> Node -> Node
 matchParent list elem =
@@ -42,10 +47,9 @@ matchParent list elem =
         case childrenCont list of
             [] ->
                 elem
-            x::xs ->
-                { elem | parent = Just x.name }
-    
 
+            x :: xs ->
+                { elem | parent = Just x.name }
 
 
 splitChildren : List String -> List ( String, Maybe String )
@@ -61,6 +65,7 @@ splitChildren list =
 
                 [ x, y ] ->
                     ( x, Just y )
+
                 _ ->
                     Debug.crash "I shouldn't exist"
     in
